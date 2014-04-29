@@ -14,5 +14,5 @@ fi
 cp -r ./vim ${HOME}/.vim
 cp -r ./vimrc ${HOME}/.vimrc
 
-mkir -p ${HOME}/.vim/bundle
+mkdir -p ${HOME}/.vim/bundle
 git clone git://github.com/Shougo/neobundle.vim ${HOME}/.vim/bundle/neobundle.vim
