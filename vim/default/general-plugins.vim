@@ -17,9 +17,10 @@ let g:neocomplcache_dictionary_filetype_lists = {
             \ }
 inoremap <expr><C-g> neocomplcache#undo_completion()
 inoremap <expr><C-l> neocomplcache#complete_common_string()
+"let g:neocomplcache_snippets_dir = "~/.vim/snippets"
 
 " neosnippets
-let g:neocomplcache_snippets_dir = "~/.vim/snippets"
+let g:neosnippet#snippets_directory='~/.vim/snippets'
 
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)

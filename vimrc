@@ -34,11 +34,9 @@ NeoBundle 'mattn/emmet-vim'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'mattn/perldoc-vim.git'
-"NeoBundle 'Shougo/neosnippet'
-"NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
 
-"runtime! userautoload/*.vim
-"set runtimepath+=$HOME/.vim/userautoload
 " Enable File Type
 filetype on
 filetype plugin on
