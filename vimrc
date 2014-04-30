@@ -37,4 +37,13 @@ NeoBundle 'mattn/perldoc-vim.git'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 
-runtime! userautoload/*.vim
+"runtime! userautoload/*.vim
+"set runtimepath+=$HOME/.vim/userautoload
+" Enable File Type
+filetype on
+filetype plugin on
+filetype indent on
+
+source $HOME/.vim/default/basic.vim
+source $HOME/.vim/default/key-map.vim
+source $HOME/.vim/default/general-plugins.vim

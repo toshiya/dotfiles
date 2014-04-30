@@ -37,3 +37,6 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 if has('conceal')
     set conceallevel=2 concealcursor=i
 endif
+
+" emmet
+let g:user_emmet_leader_key='<C-e>'

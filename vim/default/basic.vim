@@ -1,10 +1,7 @@
 """ General Setup
+
 " Syntax
 syntax on
-
-" Enable File Type
-filetype plugin on
-filetype indent on
 
 set ruler
 set nocompatible
