@@ -3,11 +3,11 @@
 vimdir=${HOME}/.vim
 vimrc=${HOME}/.vimrc
 
-if [ -a ${vimdir} ]; then
+if [ -d ${vimdir} ]; then
     mv $HOME/.vim $HOME/.vim.bak
 fi
 
-if [ -a ${vimrc} ]; then
+if [ -f ${vimrc} ]; then
     mv $HOME/.vimrc $HOME/.vimrc.bak
 fi
 

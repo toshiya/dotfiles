@@ -19,6 +19,12 @@ set smartindent
 set expandtab
 set shiftwidth=4
 
+" 不可視文字を表示
+set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲
+highlight SpecialKey ctermfg=darkgray                    
+highlight NonText ctermfg=darkgray                       
+set list
+
 "" Misc Settings
 
 " スクロールする時に下が見えるようにする
@@ -29,9 +35,6 @@ set vb t_vb=
 set novisualbell
 " OSのクリップボードを使う
 set clipboard+=unnamed
-
-" " 不可視文字を表示
-set list
 
 " 移動コマンドを使ったとき、行頭に移動しない
 set nostartofline
@@ -51,8 +54,6 @@ set wrap linebreak nolist
 " 入力されているテキストの最大幅を無効にする
 set textwidth=0
 
-" 不可視文字を表示
-set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲
 
 " インデントをshiftwidthの倍数に丸める
 set shiftround
@@ -92,3 +93,8 @@ set hidden
 
 "新しく開く代わりにすでに開いているバッファを開く
 set switchbuf=useopen
+
+highlight Search ctermfg=10 ctermbg=20
+highlight Pmenu ctermbg=4
+highlight PmenuSel ctermbg=1
+highlight PMenuSbar ctermbg=4
