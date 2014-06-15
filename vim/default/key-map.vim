@@ -17,6 +17,12 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" タブ切り替え
+nnoremap <C-t>   :tabnew<CR>
+nnoremap tn :tabnext<CR>
+nnoremap tp :tabprev<CR>
+nnoremap tc :tabclose<CR>
+
 " 入力モード中に素早くjjと入力した場合はESCとみなす
 inoremap jj <Esc>
 " EscEscでハイライトを消す

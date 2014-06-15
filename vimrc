@@ -36,6 +36,7 @@ NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'mattn/perldoc-vim.git'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle "kien/ctrlp.vim"
 
 " Enable File Type
 filetype on
