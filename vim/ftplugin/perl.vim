@@ -7,3 +7,5 @@ set iskeyword+=:
 "" perldoc the word under cursor.
 nnoremap <expr> <C-e>pld ':Perldoc ' . expand("<cword>")
 nnoremap <expr> <C-e>grp ':vimgrep ;\<' . expand('<cword>') . '\>; **/*.pm \| cw'
+
+nnoremap cc :QuickRun -cmdopt "-Ilib -c"

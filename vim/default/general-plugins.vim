@@ -1,5 +1,10 @@
 "" quickrun
-let g:quickrun_config={'*': {'split': ''}}
+""let g:quickrun_config={'*': {'split': ''}}
+ let g:quickrun_config = {
+ \   'perl' : {
+ \       'cmdopt': '-Ilib',
+ \    },
+ \}
 set splitbelow
 set splitright
 

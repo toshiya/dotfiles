@@ -18,7 +18,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " タブ切り替え
-nnoremap <C-t>   :tabnew<CR>
+nnoremap tt :tabnew<CR>
 nnoremap tn :tabnext<CR>
 nnoremap tp :tabprev<CR>
 nnoremap tc :tabclose<CR>
