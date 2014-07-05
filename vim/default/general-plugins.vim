@@ -9,7 +9,7 @@ set splitbelow
 set splitright
 
 "" vimfiler
-nnoremap <Leader>e :VimFiler <CR>
+nnoremap <Leader>e :VimFiler -split -simple -winwidth=30 -no-quit<CR>
 let g:vimfiler_as_default_explorer = 1
 
 "" neocomplcache
