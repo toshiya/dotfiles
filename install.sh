@@ -4,12 +4,16 @@ vimdir=${HOME}/.vim
 vimrc=${HOME}/.vimrc
 
 if [ -d ${vimdir} ]; then
-    mv $HOME/.vim $HOME/.vim.bak
+    if [ -d ${vimdir}.bak ]; then
+        rm -rf ${vimdir}.bak
+    fi
+    mv ${vimdir} ${vimdir}.bak
 fi
 
 if [ -f ${vimrc} ]; then
-    mv $HOME/.vimrc $HOME/.vimrc.bak
+    mv ${vimrc} ${vimrc}.bak
 fi
+
 
 cp -r ./vim ${HOME}/.vim
 cp -r ./vimrc ${HOME}/.vimrc
