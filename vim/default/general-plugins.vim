@@ -4,6 +4,9 @@
  \   'perl' : {
  \       'cmdopt': '-Ilib',
  \    },
+ \   'javascript' : {
+ \       'command': 'jshint',
+ \    },
  \}
 set splitbelow
 set splitright

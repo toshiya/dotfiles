@@ -23,6 +23,12 @@ nnoremap tn :tabnext<CR>
 nnoremap tp :tabprev<CR>
 nnoremap tc :tabclose<CR>
 
+" 画面分割
+nnoremap vs :vsplit<CR>
+nnoremap ss :split<CR>
+nnoremap qs :q<CR>
+
+
 " 入力モード中に素早くjjと入力した場合はESCとみなす
 inoremap jj <Esc>
 " EscEscでハイライトを消す
