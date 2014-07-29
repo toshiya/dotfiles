@@ -9,10 +9,10 @@ snippet d
     use Data::Dumper;
 
 snippet pd
-    print Dumper;
+    print Dumper
 
 snippet dd
-    diag Dumper;
+    diag Dumper
 
 snippet n
 abbr sub new
@@ -24,7 +24,14 @@ abbr sub new
         }, $class;
     }
 
+snippet f
+    sub {
+        my ($self, ) = @_;
+        return 0;
+    }
+
 snippet fe
     foreach my ( ) {
 
     }
+
