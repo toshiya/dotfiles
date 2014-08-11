@@ -20,10 +20,24 @@ set expandtab
 set shiftwidth=4
 
 " 不可視文字を表示
-set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲
 highlight SpecialKey ctermfg=darkgray                    
 highlight NonText ctermfg=darkgray                       
-set list
+
+"全角スペースをハイライトさせる。
+function! JISX0208SpaceHilight()
+    syntax match JISX0208Space "　" display containedin=ALL
+    highlight JISX0208Space term=underline ctermbg=LightCyan
+endfunction
+"syntaxの有無をチェックし、新規バッファと新規読み込み時にハイライトさせる
+
+if has("syntax")
+    syntax on
+    augroup invisible
+        autocmd! invisible
+        "autocmd BufNew,BufRead * call SOLSpaceHilight()
+        autocmd BufNew,BufRead * call JISX0208SpaceHilight()
+    augroup END
+endif
 
 "" Misc Settings
 
@@ -98,3 +112,6 @@ highlight Search ctermfg=10 ctermbg=20
 highlight Pmenu ctermbg=4
 highlight PmenuSel ctermbg=1
 highlight PMenuSbar ctermbg=4
+
+set list
+set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲
