@@ -30,5 +30,8 @@ fi
 cp -r ./vim ${HOME}/.vim
 cp -r ./vimrc ${HOME}/.vimrc
 
+cp -r ./zsh ${HOME}/.zsh
+cp -r ./zshrc ${HOME}/.zshrc
+
 mkdir -p ${HOME}/.vim/bundle
 git clone git://github.com/Shougo/neobundle.vim ${HOME}/.vim/bundle/neobundle.vim
