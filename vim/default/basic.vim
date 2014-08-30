@@ -19,11 +19,6 @@ set smartindent
 set expandtab
 set shiftwidth=4
 
-" 不可視文字を表示
-set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲
-highlight SpecialKey ctermfg=darkgray                    
-highlight NonText ctermfg=darkgray                       
-set list
 
 "" Misc Settings
 

@@ -12,8 +12,7 @@ set splitbelow
 set splitright
 
 "" vimfiler
-nnoremap <Leader>e :VimFiler -split -simple -winwidth=30 -no-quit<CR>
-let g:vimfiler_as_default_explorer = 1
+nnoremap <Leader>e :NERDTree<CR>
 
 "" neocomplcache
 let g:neocomplcache_enable_at_startup = 1

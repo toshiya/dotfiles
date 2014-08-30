@@ -20,7 +20,6 @@ call neobundle#rc(expand('~/.vim/bundle'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/vimproc', {
 \ 'build': {
 \ 'windows': 'make -f make_mingw32.mak',
@@ -37,6 +36,7 @@ NeoBundle 'mattn/perldoc-vim.git'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle "kien/ctrlp.vim"
+NeoBundle 'scrooloose/nerdtree'
 
 " Enable File Type
 filetype on
@@ -46,3 +46,9 @@ filetype indent on
 source $HOME/.vim/default/basic.vim
 source $HOME/.vim/default/key-map.vim
 source $HOME/.vim/default/general-plugins.vim
+
+" 不可視文字を表示
+set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲
+highlight SpecialKey ctermfg=darkgray
+highlight NonText ctermfg=darkgray
+set list
