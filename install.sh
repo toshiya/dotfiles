@@ -2,6 +2,8 @@
 
 vimdir=${HOME}/.vim
 vimrc=${HOME}/.vimrc
+zshdir=${HOME}/.zsh
+zshrc=${HOME}/.zshrc
 
 if [ -d ${vimdir} ]; then
     if [ -d ${vimdir}.bak ]; then
@@ -14,6 +16,16 @@ if [ -f ${vimrc} ]; then
     mv ${vimrc} ${vimrc}.bak
 fi
 
+if [ -d ${zshdir} ]; then
+    if [ -d ${zshdir}.bak ]; then
+        rm -rf ${zshdir}.bak
+    fi
+    mv ${zshdir} ${zshdir}.bak
+fi
+
+if [ -f ${zshrc} ]; then
+    mv ${zshrc} ${zshrc}.bak
+fi
 
 cp -r ./vim ${HOME}/.vim
 cp -r ./vimrc ${HOME}/.vimrc
