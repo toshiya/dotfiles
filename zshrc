@@ -41,7 +41,7 @@ export LC_ALL="ja_JP.UTF-8"
 # prompt display setting
 setopt PROMPT_SUBST
 setopt TRANSIENT_RPROMPT
-PROMPT='[%F{red}%B%n%b%f@%F{white}%U%3d%u%f]# '
+PROMPT='[%F{red}%B%n%b%f@${HOST}:%F{white}%U%3d%u%f]# '
 precmd () {
     RPROMPT="%F{mazenda}%U$(__ruby_ps1)%u%f:%F{mazenda}%U$(__perl_ps1)%u%f:%F{mazenda}%U$(__git_ps1 "%s")%u%f"
 }
