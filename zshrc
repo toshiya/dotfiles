@@ -41,7 +41,7 @@ export LC_ALL="ja_JP.UTF-8"
 # prompt display setting
 setopt PROMPT_SUBST
 setopt TRANSIENT_RPROMPT
-PROMPT='[%F{red}%B%n%b%f@${HOST}:%F{white}%U%3d%u%f]# '
+PROMPT='[%B%n%b@%F{red}%B${HOST}%b%f:%F{white}%U%3d%u%f]# '
 precmd () {
     RPROMPT="%F{mazenda}%U$(__ruby_ps1)%u%f:%F{mazenda}%U$(__perl_ps1)%u%f:%F{mazenda}%U$(__git_ps1 "%s")%u%f"
 }
@@ -55,9 +55,6 @@ setopt share_history        # share command history data
 
 # cd -[tab] to show cd history
 setopt auto_pushd
-
-# command auto correction
-setopt correct
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
