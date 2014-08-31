@@ -3,6 +3,7 @@
 vimdir=${HOME}/.vim
 vimrc=${HOME}/.vimrc
 zshdir=${HOME}/.zsh
+zshenv=${HOME}/.zshenv
 zshrc=${HOME}/.zshrc
 gitconfig=${HOME}/.gitconfig
 
@@ -36,6 +37,7 @@ cp -r ./vim ${HOME}/.vim
 cp -r ./vimrc ${HOME}/.vimrc
 
 cp -r ./zsh ${HOME}/.zsh
+cp -r ./zshenv ${HOME}/.zshenv
 cp -r ./zshrc ${HOME}/.zshrc
 cp -r ./gitconfig ${HOME}/.gitconfig
 
