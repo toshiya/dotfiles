@@ -89,7 +89,7 @@ set hidden
 "新しく開く代わりにすでに開いているバッファを開く
 set switchbuf=useopen
 
-highlight Search ctermfg=10 ctermbg=20
-highlight Pmenu ctermbg=4
+highlight Search ctermbg=red ctermfg=white
+highlight Pmenu  ctermbg=red ctermfg=white
 highlight PmenuSel ctermbg=1
 highlight PMenuSbar ctermbg=4

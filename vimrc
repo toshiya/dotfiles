@@ -16,8 +16,8 @@ filetype off
 if has('vim_starting')
 set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
-call neobundle#rc(expand('~/.vim/bundle'))
 
+call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc', {
@@ -37,6 +37,17 @@ NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle "kien/ctrlp.vim"
 NeoBundle 'scrooloose/nerdtree'
+call neobundle#end()
+
+" Bundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'pangloss/vim-javascript'
+
+call vundle#end()
+filetype plugin indent on
 
 " Enable File Type
 filetype on

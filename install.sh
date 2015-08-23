@@ -29,17 +29,22 @@ if [ -f ${zshrc} ]; then
     mv ${zshrc} ${zshrc}.bak
 fi
 
+if [ -f ${zshenv} ]; then
+    mv ${zshenv} ${zshenv}.bak
+fi
+
 if [ -f ${gitconfig} ]; then
     mv ${gitconfig} ${gitconfig}.bak
 fi
 
-cp -r ./vim ${HOME}/.vim
-cp -r ./vimrc ${HOME}/.vimrc
+cp ./vimrc ${HOME}/.vimrc
+cp ./zshenv ${HOME}/.zshenv
+cp ./zshrc ${HOME}/.zshrc
+cp ./gitconfig ${HOME}/.gitconfig
 
+cp -r ./vim ${HOME}/.vim
 cp -r ./zsh ${HOME}/.zsh
-cp -r ./zshenv ${HOME}/.zshenv
-cp -r ./zshrc ${HOME}/.zshrc
-cp -r ./gitconfig ${HOME}/.gitconfig
 
 mkdir -p ${HOME}/.vim/bundle
 git clone git://github.com/Shougo/neobundle.vim ${HOME}/.vim/bundle/neobundle.vim
+git clone git@github.com:VundleVim/Vundle.vim.git ${HOME}/.vim/bundle/Vundle.vim

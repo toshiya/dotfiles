@@ -5,7 +5,7 @@
  \       'cmdopt': '-Ilib',
  \    },
  \   'javascript' : {
- \       'command': 'jshint',
+ \       'command': 'node',
  \    },
  \}
 set splitbelow

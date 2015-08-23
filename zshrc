@@ -35,9 +35,6 @@ function __ruby_ps1 ()
 autoload -U compinit
 compinit
 
-export LANG=ja_JP.UTF-8
-export LC_ALL="ja_JP.UTF-8"
-
 # prompt display setting
 setopt PROMPT_SUBST
 setopt TRANSIENT_RPROMPT
@@ -69,7 +66,6 @@ alias ls="ls -G"
 
 # Environmental Variable
 export PATH=$PATH:${HOME}/local/bin
-
 export PATH=$PATH:${HOME}/.rbenv/bin
 export PATH=$PATH:${HOME}/.rbenv/bin
 eval "$(rbenv init -)"
