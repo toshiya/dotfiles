@@ -37,17 +37,8 @@ NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle "kien/ctrlp.vim"
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'jason0x43/vim-js-indent'
 call neobundle#end()
-
-" Bundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'pangloss/vim-javascript'
-
-call vundle#end()
-filetype plugin indent on
 
 " Enable File Type
 filetype on
@@ -63,3 +54,4 @@ set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲
 highlight SpecialKey ctermfg=darkgray
 highlight NonText ctermfg=darkgray
 set list
+set fileencodings=utf-8,euc-jp,ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,euc-jp,sjis,cp932
