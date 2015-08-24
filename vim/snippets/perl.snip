@@ -3,7 +3,6 @@ abbr #!/
     use strict;
     use warnings;
     use utf8;
-    use Class::Accessor::Lite (rw => []);
 
 snippet d
     use Data::Dumper;
@@ -14,8 +13,7 @@ snippet pd
 snippet dd
     diag Dumper
 
-snippet n
-abbr sub new
+snippet new
     sub new {
         my $class = shift;
 
@@ -24,14 +22,16 @@ abbr sub new
         }, $class;
     }
 
-snippet f
+snippet sub
     sub {
         my ($self, ) = @_;
         return 0;
     }
 
-snippet fe
-    foreach my ( ) {
-
+snippet eval
+    eval {
+    };
+    if (my $e = $@) {
     }
+
 

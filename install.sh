@@ -47,4 +47,4 @@ cp -r ./zsh ${HOME}/.zsh
 
 mkdir -p ${HOME}/.vim/bundle
 git clone git://github.com/Shougo/neobundle.vim ${HOME}/.vim/bundle/neobundle.vim
-git clone git@github.com:VundleVim/Vundle.vim.git ${HOME}/.vim/bundle/Vundle.vim
+git clone git://github.com/VundleVim/Vundle.vim.git ${HOME}/.vim/bundle/Vundle.vim
