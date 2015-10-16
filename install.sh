@@ -1,49 +1,29 @@
 #!/bin/bash
 
-vimdir=${HOME}/.vim
-vimrc=${HOME}/.vimrc
-zshdir=${HOME}/.zsh
-zshenv=${HOME}/.zshenv
-zshrc=${HOME}/.zshrc
-gitconfig=${HOME}/.gitconfig
+PWD=`pwd`
+REPOSITORY_PATH=${REPOSITORY_PATH-$PWD}
 
-if [ -d ${vimdir} ]; then
-    if [ -d ${vimdir}.bak ]; then
-        rm -rf ${vimdir}.bak
-    fi
-    mv ${vimdir} ${vimdir}.bak
+VIM_HOME=${HOME}/.vim
+VIMRC_PATH=${HOME}/.vimrc
+ZSH_HOME=${HOME}/.zsh
+ZSHRC_PATH=${HOME}/.zshrc
+ZSHENV_PATH=${HOME}/.zshenv
+GITCONFIG_PATH=${HOME}/.gitconfig
+
+if [[ -d ${VIM_HOME} || -f ${VIMRC_PATH} || -d ${ZSH_HOME} || -f ${ZSHRC_PATH} || -f ${ZSHENV_HOME} || -f ${GITCONFIG_PATH} ]]; then
+    echo "vim or zsh environemt already exists."
+    echo "backup and remove ${VIM_HOME} ${VIMRC_PATH} ${ZSH_HOME} ${ZSHRC_PATH} ${ZSHENV_PATH} ${GITCONFIG_PATH}"
+    exit 1
 fi
 
-if [ -f ${vimrc} ]; then
-    mv ${vimrc} ${vimrc}.bak
-fi
+# make static link
+ln -s ${REPOSITORY_PATH}/vim       ${VIM_HOME}
+ln -s ${REPOSITORY_PATH}/vimrc     ${VIMRC_PATH}
+ln -s ${REPOSITORY_PATH}/zsh       ${ZSH_HOME}
+ln -s ${REPOSITORY_PATH}/zshrc     ${ZSHRC_PATH}
+ln -s ${REPOSITORY_PATH}/zshenv    ${ZSHENV_PATH}
+ln -s ${REPOSITORY_PATH}/gitconfig ${GITCONFIG_PATH}
 
-if [ -d ${zshdir} ]; then
-    if [ -d ${zshdir}.bak ]; then
-        rm -rf ${zshdir}.bak
-    fi
-    mv ${zshdir} ${zshdir}.bak
-fi
-
-if [ -f ${zshrc} ]; then
-    mv ${zshrc} ${zshrc}.bak
-fi
-
-if [ -f ${zshenv} ]; then
-    mv ${zshenv} ${zshenv}.bak
-fi
-
-if [ -f ${gitconfig} ]; then
-    mv ${gitconfig} ${gitconfig}.bak
-fi
-
-cp ./vimrc ${HOME}/.vimrc
-cp ./zshenv ${HOME}/.zshenv
-cp ./zshrc ${HOME}/.zshrc
-cp ./gitconfig ${HOME}/.gitconfig
-
-cp -r ./vim ${HOME}/.vim
-cp -r ./zsh ${HOME}/.zsh
-
-mkdir -p ${HOME}/.vim/bundle
-git clone git://github.com/Shougo/neobundle.vim ${HOME}/.vim/bundle/neobundle.vim
+# Install NeoBundle
+mkdir -p ${VIM_HOME}/bundle
+git clone git://github.com/Shougo/neobundle.vim ${VIM_HOME}/bundle/neobundle.vim
