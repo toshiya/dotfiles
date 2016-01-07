@@ -38,7 +38,10 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle "kien/ctrlp.vim"
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'scrooloose/syntastic'
 
+" go
+NeoBundle 'fatih/vim-go'
 
 " html
 NeoBundle 'mattn/emmet-vim'

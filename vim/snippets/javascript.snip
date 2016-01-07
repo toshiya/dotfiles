@@ -1,4 +1,12 @@
-snippet func
-    function () {
-        var _this = this;
+snippet f
+    ;(function (global) {
+
+    function Module() {
     }
+
+    Module.prototype = {
+    };
+
+    module.exports = Module;
+
+    })(this);

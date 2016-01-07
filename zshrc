@@ -65,7 +65,6 @@ fi
 alias ls="ls -G"
 
 # Environmental Variable
-export PATH=/usr/local/bin:$PATH
 export PATH=$PATH:${HOME}/local/bin
 export PATH=$PATH:${HOME}/.rbenv/bin
 export PATH=$PATH:${HOME}/.rbenv/bin
@@ -74,4 +73,9 @@ eval "$(rbenv init -)"
 #nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
+# go
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/myrepos/go
+
+# perl
 source ${HOME}/.perlbrew/etc/bashrc
