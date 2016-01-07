@@ -5,3 +5,4 @@ au! BufNewFile,BufRead *.perl setf perl
 au! BufNewFile,BufRead *.psgi setf perl
 au! BufNewFile,BufRead *.scss setf css
 au! BufNewFile,BufRead *.json setf json
+au! BufNewFile,BufRead *.go setf go
