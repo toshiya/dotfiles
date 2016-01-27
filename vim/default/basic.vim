@@ -93,3 +93,5 @@ highlight Search ctermbg=red ctermfg=white
 highlight Pmenu  ctermbg=red ctermfg=white
 highlight PmenuSel ctermbg=1
 highlight PMenuSbar ctermbg=4
+
+autocmd QuickFixCmdPost *grep* cwindow
