@@ -7,3 +7,4 @@ au! BufNewFile,BufRead *.scss setf css
 au! BufNewFile,BufRead *.json setf json
 au! BufNewFile,BufRead *.go setf go
 au! BufNewFile,BufRead Vagrantfile setf ruby
+au! BufNewFile,BufRead *.ru setf ruby
