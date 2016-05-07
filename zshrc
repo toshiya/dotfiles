@@ -64,17 +64,24 @@ fi
 
 alias ls="ls -G"
 
-# Environmental Variable
-export PATH=$PATH:${HOME}/local/bin
+# ruby
 export PATH=$PATH:${HOME}/.rbenv/bin
 eval "$(rbenv init -)"
 
 #nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
-# go
-export PATH=$PATH:/usr/local/go/bin
-export GOPATH=$HOME/myrepos/go
-
 # perl
 source ${HOME}/.perlbrew/etc/bashrc
+
+# go
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/toshiya.komoda/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/Users/toshiya.komoda/google-cloud-sdk/completion.zsh.inc'
