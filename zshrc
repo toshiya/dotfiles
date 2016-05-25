@@ -63,6 +63,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 alias ls="ls -G"
+alias be="bundle exec --"
 
 # ruby
 export PATH=$PATH:${HOME}/.rbenv/bin
