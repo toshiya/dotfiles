@@ -81,8 +81,17 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 
+# google
+
 # The next line updates PATH for the Google Cloud SDK.
-source '/Users/toshiya.komoda/google-cloud-sdk/path.zsh.inc'
+#source '/Users/toshiya.komoda/google-cloud-sdk/path.zsh.inc'
 
 # The next line enables shell command completion for gcloud.
-source '/Users/toshiya.komoda/google-cloud-sdk/completion.zsh.inc'
+#source '/Users/toshiya.komoda/google-cloud-sdk/completion.zsh.inc'
+
+# Android SDK
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export ANDROID_SDK_HOME=$ANDROID_HOME # Android SDK's install path
+export PATH=$ANDROID_SDK_HOME/tools:$ANDROID_SDK_HOME/platform-tools:$PATH
+export ANDROID_NDK_HOME=$HOME/local/android-ndk-r11c  # Android NDK's install path
+export PATH=$ANDROID_NDK_HOME:$PATH
