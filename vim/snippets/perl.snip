@@ -36,3 +36,6 @@ snippet eval
 
 snippet Getopt::Long
     use Getopt::Long qw(:config posix_default no_ignore_case gnu_compat);
+
+snippet lltsv
+    perl -F"\t" -alne 'map { /(\S+?):(\S+)/ ; $h = { %$h, $1 => $2 }; } @F;'
