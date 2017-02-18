@@ -80,14 +80,22 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+# python
+export PYENV_ROOT="${HOME}/.pyenv"
+export PATH="${PYENV_ROOT}/bin:$PATH"
+export PATH="${HOME}/.local/bin:$PATH"
+
+eval "$(pyenv init -)"
+alias activate="source $HOME/.pyenv/versions/anaconda-4.0.0/bin/activate"
+alias deactivate="source $HOME/.pyenv/versions/anaconda-4.0.0/bin/deactivate"
 
 # google
 
 # The next line updates PATH for the Google Cloud SDK.
-#source '/Users/toshiya.komoda/google-cloud-sdk/path.zsh.inc'
+source '/Users/toshiya/local/google-cloud-sdk/path.zsh.inc'
 
 # The next line enables shell command completion for gcloud.
-#source '/Users/toshiya.komoda/google-cloud-sdk/completion.zsh.inc'
+source '/Users/toshiya/local/google-cloud-sdk/completion.zsh.inc'
 
 # Android SDK
 export ANDROID_HOME=$HOME/Library/Android/sdk
