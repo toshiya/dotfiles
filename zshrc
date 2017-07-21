@@ -4,33 +4,6 @@
 
 # Utility
 source ~/.zsh/git-prompt.sh
-function __perl_ps1 ()
-{
-    if [ -n `type perlbrew 2>&1 > /dev/null && echo "found"` ] ; then
-        perlbrew_perl_version=`perlbrew list | grep '*' | sed 's/\* //'`
-        if [ "$perlbrew_perl_version" = "" ] ; then
-            printf "[system-perl]"
-        else
-            printf "[$perlbrew_perl_version]"
-        fi
-    else
-        printf "perlbrew not install"
-    fi
-}
-
-function __ruby_ps1 ()
-{
-    if [ -n `type rbenv 2>&1 > /dev/null && echo "found"` ] ; then
-        version=`rbenv versions | grep "*" | awk '{print $2}'`
-        if [ "$version" = "system" ] ; then
-            printf "[system-ruby]"
-        else
-            printf "[$version]"
-        fi
-    else
-        printf "perlbrew not install"
-    fi
-}
 
 autoload -U compinit
 compinit
@@ -40,7 +13,7 @@ setopt PROMPT_SUBST
 setopt TRANSIENT_RPROMPT
 PROMPT='[%B%n%b@%F{red}%B${HOST}%b%f:%F{white}%U%3d%u%f]# '
 precmd () {
-    RPROMPT="%F{mazenda}%U$(__ruby_ps1)%u%f:%F{mazenda}%U$(__perl_ps1)%u%f:%F{mazenda}%U$(__git_ps1 "%s")%u%f"
+    RPROMPT="%F{mazenda}%U$(__git_ps1 "%s")%u%f"
 }
 
 # command history
@@ -73,7 +46,7 @@ eval "$(rbenv init -)"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # perl
-source ${HOME}/.perlbrew/etc/bashrc
+source ${HOME}/perl5/perlbrew/etc/bashrc
 
 # go
 export PATH=$PATH:/usr/local/go/bin
@@ -86,20 +59,3 @@ export PATH="${PYENV_ROOT}/bin:$PATH"
 export PATH="${HOME}/.local/bin:$PATH"
 
 eval "$(pyenv init -)"
-alias activate="source $HOME/.pyenv/versions/anaconda-4.0.0/bin/activate"
-alias deactivate="source $HOME/.pyenv/versions/anaconda-4.0.0/bin/deactivate"
-
-# google
-
-# The next line updates PATH for the Google Cloud SDK.
-source '/Users/toshiya/local/google-cloud-sdk/path.zsh.inc'
-
-# The next line enables shell command completion for gcloud.
-source '/Users/toshiya/local/google-cloud-sdk/completion.zsh.inc'
-
-# Android SDK
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export ANDROID_SDK_HOME=$ANDROID_HOME # Android SDK's install path
-export PATH=$ANDROID_SDK_HOME/tools:$ANDROID_SDK_HOME/platform-tools:$PATH
-export ANDROID_NDK_HOME=$HOME/local/android-ndk-r11c  # Android NDK's install path
-export PATH=$ANDROID_NDK_HOME:$PATH
