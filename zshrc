@@ -45,9 +45,6 @@ eval "$(rbenv init -)"
 #nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
-# perl
-source ${HOME}/perl5/perlbrew/etc/bashrc
-
 # go
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
